@@ -14,13 +14,16 @@ body{
 
 html,
 body,
+header,
 .view {
   height:100%;
 }
 
+
 @media (min-width: 900px) and (min-width: 1200px) and (orientation:portrait) {
   html,
   body,
+  header,
   .view {
     height: 600px;
   }
@@ -31,6 +34,7 @@ body,
 @media (max-width: 1201px) and (max-width: 2500px) and (orientation:landscape) {
   html,
   body,
+  header,
   .view {
     height: 440px;
   }
@@ -143,7 +147,7 @@ h4,h2{
   font-family:"MeganJune", sans-serif !important;
   font-size: 16px;
   letter-spacing: 1px;
-
+  
 }
 
 
