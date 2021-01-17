@@ -36,7 +36,7 @@ require 'PHPMailer/SMTP.php';
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $mail->Username   = 'pag.laconchita.web@gmail.com';                     // SMTP username
         $mail->Password   = 'Z3f4:765*';                               // SMTP password
-        $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->SMTPSecure = 'TLS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
