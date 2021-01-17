@@ -1,0 +1,33 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^\laconchita\.co$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.proyecto\.laconchita\.co$
+RewriteRule ^/?$ "http\:\/\/www\.laconchita\.co" [R=301,L]
+
+
+# HTTPS redirection
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# End HTTPS redirection
+
+
+<IfModule mod_headers.c>
+Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+
+
+# Un año para archivos de imagen
+<filesMatch ". (Jpg | jpeg | png | gif | ico) $">
+Cache-Control "max-age = 31536000, public"
+</filesMatch>
+# Un mes para css y js
+<filesMatch ". (Css | js) $">
+Cache-Control "max-age = 2628000, public"
+</filesMatch>
+
+
