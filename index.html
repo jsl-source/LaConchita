@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/mdb.css">
   <link  rel="icon"   href="img/BrandLaConchita.ico" type="e/ico" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="css/style.css">
@@ -178,32 +179,52 @@
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div class="view lazyload" style="background: url('img/imgconchita/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-          <!-- Mask & flexbox options-->
-          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-            <!-- Content -->
-            <div class="container">
-              <!--Grid row-->
-              <div class="row pt-lg-5 mt-lg-5 justify-content-center">
-                <!--Grid column-->
-                <div class="col-sm-12 col-md-6 mb-5 mt-5 white-text text-center animated fadeInLeft" data-wow-delay="0.3s">
-                    <!--Grid column-->
-                    <div class="row justify-content-center">
-                          <img data-src="img/imgconchita/LogoBlancoConchita2.png" class="img-fluid logo lazyload" alt="">
-                          <!--Grid column-->
-                          <h6 class="mb-3 antipasto">"Una inversión que busca <br> la tranquilidad 
-                            y la comodidad de toda su familia".</h6>
-                          <div class="w-100"></div>
-                          <!-- <a class="ventas btn btn-outline-white btn-rounded-pill" href="#sales">Visítenos</a> -->
-                    </div>
-                </div>
-                <!--Grid column-->
-              </div>
-              <!--Grid row-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active"
+            ></li>
+            <li data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1"></li>
+            <li data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://mdbootstrap.com/img/new/slides/041.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-            <!-- Content -->
+            <div class="carousel-item">
+              <img
+                src="https://mdbootstrap.com/img/new/slides/042.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://mdbootstrap.com/img/new/slides/043.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
           </div>
-          <!-- Mask & flexbox options-->
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-mdb-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-mdb-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
         </div>
         <!-- Full Page Intro -->
     </header>
@@ -854,7 +875,7 @@
          <!--seccion preguntas frecuentes-->
 
       <!--seccion contactenos-->
-      <div class="container empresa  my-4 d-block d-xl-none z-depth-2" id="contactenos1" style="background: #00838f;">
+      <div class="container empresa  my-4 d-block d-xl-none z-depth-2" id="contactenos1" style="background: #00838f !important;">
         <div class="row d-flex align-items-center">
           <div class="col d-flex justify-content-center mt-4">
               <div class="col-md-6 col-xl-5 mb-4">
@@ -865,7 +886,7 @@
                       <!--Header-->
                       <div class="text-center">
                         <h3 class="dark-grey-text d-block" id="letrero1">
-                          <strong>Contáctenos:</strong>
+                          <strong>CONTÁCTENOS:</strong>
                         </h3>
                         <h3 class="dark-grey-text d-none" id="letreroico1">
                           <i class="fas fa-check-circle fa-2x green-text"></i>
@@ -906,7 +927,7 @@
                         <fieldset class="form-check">
                           <input class="form-check-input" type="checkbox" id="news1">
                           <label class="form-check-label" for="checkbox1" class="dark-grey-text" style="font-family:'MeganJune', sans-serif; font-size: 16px;
-                          letter-spacing: 1px;">¿Acepta nuestra politica de proteción de datos?t -m </label>
+                          letter-spacing: 1px;">¿Acepta nuestra politica de proteción de datos?</label>
                         </fieldset>
                       </div>
                     </div>
@@ -919,9 +940,10 @@
       </div>
       <!--seccion contactenos-->
         <!-- Seccion Ubicación-->
-   <div class="container empresa my-5 py-5 z-depth-1 mt-3 mb-5 d-sm-none d-xl-block" id="contactenos1">
-                   <!--Grid column-->
-              <div class="formulario col-md-12 col-xl-12 mb-4 " id="contactenos">
+   <div class="container empresa my-5 py-5 z-depth-1 mt-3 mb-5 d-none d-xl-block" id="contactenos" >
+          <section class="colorfondo">
+                  <!--Grid column-->
+                  <div class="formulario m-auto col-md-8 col-xl-8 mb-4 " id="contactenos">
                     <!--Form-->
                   <form method="POST" id="formulario1">
                     <div>
@@ -979,6 +1001,8 @@
                     <!--/.Form-->
               </div>
               <!--Grid column-->
+          </section>
+             
   </div>
   <!-- Seccion Ubicación-->
 
